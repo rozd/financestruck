@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>835694632540-mn4csuvnfmi0fujisk4kkkg6nf0hg122.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.835694632540-mn4csuvnfmi0fujisk4kkkg6nf0hg122</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDUxzWfRP4FtWKtMsNlLfi2RKg_0GuyLAs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>835694632540</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.github.rozd.financestruck</string>
+	<key>PROJECT_ID</key>
+	<string>financestruck</string>
+	<key>STORAGE_BUCKET</key>
+	<string>financestruck.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:835694632540:ios:6db37ae9be28ac911c9099</string>
+	<key>DATABASE_URL</key>
+	<string>https://financestruck.firebaseio.com</string>
+</dict>
+</plist>
