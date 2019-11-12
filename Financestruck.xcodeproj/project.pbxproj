@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		302CC8BDF2F6C1E9055C8749 /* Pods_Financestruck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E6B115C075F8AECC37419A /* Pods_Financestruck.framework */; };
 		50CD2100237AF0ED0084DFDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD20FF237AF0ED0084DFDC /* AppDelegate.swift */; };
 		50CD2104237AF0ED0084DFDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD2103237AF0ED0084DFDC /* ViewController.swift */; };
 		50CD2107237AF0ED0084DFDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CD2105237AF0ED0084DFDC /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23E6B115C075F8AECC37419A /* Pods_Financestruck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Financestruck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CD20FC237AF0ED0084DFDC /* Financestruck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Financestruck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CD20FF237AF0ED0084DFDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50CD2103237AF0ED0084DFDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		50CD210B237AF0F10084DFDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50CD210D237AF0F10084DFDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50CD2113237AF1560084DFDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AFB12FDBA057FAFC6136841E /* Pods-Financestruck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Financestruck.release.xcconfig"; path = "Target Support Files/Pods-Financestruck/Pods-Financestruck.release.xcconfig"; sourceTree = "<group>"; };
+		DD7EC3476AF117E958E60202 /* Pods-Financestruck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Financestruck.debug.xcconfig"; path = "Target Support Files/Pods-Financestruck/Pods-Financestruck.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				302CC8BDF2F6C1E9055C8749 /* Pods_Financestruck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		100EDFB2236E7951824DC767 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD7EC3476AF117E958E60202 /* Pods-Financestruck.debug.xcconfig */,
+				AFB12FDBA057FAFC6136841E /* Pods-Financestruck.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		50CD20F3237AF0ED0084DFDC = {
 			isa = PBXGroup;
 			children = (
 				50CD20FE237AF0ED0084DFDC /* Financestruck */,
 				50CD20FD237AF0ED0084DFDC /* Products */,
+				100EDFB2236E7951824DC767 /* Pods */,
+				FE19B84165744C3497DC0200 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = Financestruck;
 			sourceTree = "<group>";
 		};
+		FE19B84165744C3497DC0200 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23E6B115C075F8AECC37419A /* Pods_Financestruck.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50CD2110237AF0F10084DFDC /* Build configuration list for PBXNativeTarget "Financestruck" */;
 			buildPhases = (
+				37F97DCC61C1E9DCD070A2E7 /* [CP] Check Pods Manifest.lock */,
 				50CD20F8237AF0ED0084DFDC /* Sources */,
 				50CD20F9237AF0ED0084DFDC /* Frameworks */,
 				50CD20FA237AF0ED0084DFDC /* Resources */,
+				F05B9359F3260770C0133ACA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +160,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37F97DCC61C1E9DCD070A2E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Financestruck-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F05B9359F3260770C0133ACA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Financestruck/Pods-Financestruck-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Financestruck/Pods-Financestruck-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Financestruck/Pods-Financestruck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		50CD20F8237AF0ED0084DFDC /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		50CD2111237AF0F10084DFDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD7EC3476AF117E958E60202 /* Pods-Financestruck.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		50CD2112237AF0F10084DFDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFB12FDBA057FAFC6136841E /* Pods-Financestruck.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
