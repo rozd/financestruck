@@ -5,5 +5,9 @@ target 'Financestruck' do
   use_frameworks!
 
   pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+
+  pod 'ReactiveSwift'
+  pod 'ReactiveCocoa'
 
 end
