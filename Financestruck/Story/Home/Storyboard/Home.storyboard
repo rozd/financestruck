@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,14 +23,57 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96z-dN-WKD">
+                                <rect key="frame" x="145" y="832" width="124" height="30"/>
+                                <state key="normal" title="Show Households"/>
+                                <connections>
+                                    <action selector="handleShowHouseholdsTap:" destination="r2H-c2-rIP" eventType="touchUpInside" id="0W4-Zn-eQD"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6LB-fi-Sty">
+                                <rect key="frame" x="177" y="64" width="60" height="50.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8j-MY-QOy">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryq-0r-aUR">
+                                        <rect key="frame" x="0.0" y="20.5" width="60" height="30"/>
+                                        <state key="normal" title="Sign Out"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="96z-dN-WKD" firstAttribute="centerX" secondItem="yPN-mD-vLF" secondAttribute="centerX" id="UZD-eZ-SY3"/>
+                            <constraint firstItem="6LB-fi-Sty" firstAttribute="top" secondItem="LxR-J0-pms" secondAttribute="top" constant="20" id="WFt-hL-Uft"/>
+                            <constraint firstItem="6LB-fi-Sty" firstAttribute="centerX" secondItem="yPN-mD-vLF" secondAttribute="centerX" id="XGg-yl-Ymi"/>
+                            <constraint firstItem="96z-dN-WKD" firstAttribute="bottom" secondItem="LxR-J0-pms" secondAttribute="bottom" id="cXJ-hv-L4C"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LxR-J0-pms"/>
                     </view>
+                    <connections>
+                        <outlet property="signOutButton" destination="Ryq-0r-aUR" id="cCE-uH-Kf5"/>
+                        <outlet property="uidLabel" destination="U8j-MY-QOy" id="o18-RL-CrS"/>
+                        <segue destination="OxZ-VW-cqF" kind="show" identifier="showHouseholds" id="lHz-uK-aYa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="puR-IW-WUm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="25" y="82"/>
+        </scene>
+        <!--Households-->
+        <scene sceneID="5yk-L7-PoS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Households" id="OxZ-VW-cqF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2Sf-gd-dei"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxw-Vd-nSA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="82"/>
         </scene>
     </scenes>
 </document>

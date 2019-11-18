@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NFi-bj-bps">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Households View Controller-->
+        <scene sceneID="xrl-B6-yqk">
+            <objects>
+                <viewController storyboardIdentifier="HouseholdsViewController" id="NFi-bj-bps" customClass="HouseholdsViewController" customModule="Financestruck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MAM-QC-OP1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qmC-zv-NJH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HouseholdTableViewCell" id="jjI-Zl-f4q" customClass="HouseholdTableViewCell" customModule="Financestruck" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jjI-Zl-f4q" id="wMG-H2-s6Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qmC-zv-NJH" firstAttribute="leading" secondItem="yAC-8S-a9g" secondAttribute="leading" id="9HO-ku-2tf"/>
+                            <constraint firstAttribute="bottom" secondItem="qmC-zv-NJH" secondAttribute="bottom" id="G15-iH-jgo"/>
+                            <constraint firstItem="qmC-zv-NJH" firstAttribute="trailing" secondItem="yAC-8S-a9g" secondAttribute="trailing" id="XsZ-D1-uoq"/>
+                            <constraint firstItem="qmC-zv-NJH" firstAttribute="top" secondItem="yAC-8S-a9g" secondAttribute="top" id="Z5h-3B-QhV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yAC-8S-a9g"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="qmC-zv-NJH" id="6yz-DE-ndW"/>
+                        <segue destination="vXA-WT-J4x" kind="show" identifier="showHousehold" id="wBQ-Ah-iQ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0RX-gp-3Le" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146.37681159420291" y="-185.49107142857142"/>
+        </scene>
+        <!--Household View Controller-->
+        <scene sceneID="gD2-wJ-8j5">
+            <objects>
+                <viewController id="vXA-WT-J4x" customClass="HouseholdViewController" customModule="Financestruck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cvl-76-rgL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ad9-qe-hEg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MonthlyBudgetTableViewCell" id="A8F-60-LGd" customClass="MonthlyBudgetTableViewCell" customModule="Financestruck" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A8F-60-LGd" id="hZp-7O-S5W">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ad9-qe-hEg" firstAttribute="trailing" secondItem="SHW-jK-qZh" secondAttribute="trailing" id="Q4J-KO-qDt"/>
+                            <constraint firstAttribute="bottom" secondItem="ad9-qe-hEg" secondAttribute="bottom" id="Umk-vc-iqs"/>
+                            <constraint firstItem="ad9-qe-hEg" firstAttribute="leading" secondItem="SHW-jK-qZh" secondAttribute="leading" id="WN1-Of-jD6"/>
+                            <constraint firstItem="ad9-qe-hEg" firstAttribute="top" secondItem="SHW-jK-qZh" secondAttribute="top" id="ule-Zg-DWh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SHW-jK-qZh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gcw-sd-VIg"/>
+                    <connections>
+                        <outlet property="tableView" destination="ad9-qe-hEg" id="ljh-Xb-bBy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NTJ-Ol-uSU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728.98550724637687" y="-185.49107142857142"/>
+        </scene>
+    </scenes>
+</document>

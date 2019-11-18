@@ -29,6 +29,7 @@ extension Current {
 
 protocol AuthorizableUser {
     var isAuthenticated: Bool { get }
+    var uid: String? { get }
     func signUp(with credentials: SignUpForm) -> SignalProducer<(), NSError>
     func signIn(with credentials: SignInForm) -> SignalProducer<(), NSError>
     func signOut() -> SignalProducer<(), NSError>
@@ -40,16 +41,26 @@ extension Current.User: AuthorizableUser {
         return service.isAuthenticated
     }
 
+    var uid: String? {
+        return service.uid
+    }
+
     func signUp(with credentials: SignUpForm) -> SignalProducer<(), NSError> {
-        return service.signUp(with: credentials)
+        return service.signUp(with: credentials).on(value: { _ in
+            NotificationCenter.default.post(Notification(name: .userSignIn, object: self))
+        })
     }
 
     func signIn(with credentials: SignInForm) -> SignalProducer<(), NSError> {
-        return service.signIn(with: credentials)
+        return service.signIn(with: credentials).on(value: { _ in
+            NotificationCenter.default.post(Notification(name: .userSignIn, object: self))
+        })
     }
 
     func signOut() -> SignalProducer<(), NSError> {
-        return service.signOut()
+        return service.signOut().on(value: { _ in
+            NotificationCenter.default.post(Notification(name: .userSignOut, object: self))
+        })
     }
 
 }

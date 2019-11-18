@@ -8,6 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		302CC8BDF2F6C1E9055C8749 /* Pods_Financestruck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E6B115C075F8AECC37419A /* Pods_Financestruck.framework */; };
+		505FE15D23809C8B009C0566 /* Household.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE15C23809C8B009C0566 /* Household.swift */; };
+		505FE15F23809CAA009C0566 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE15E23809CAA009C0566 /* Expense.swift */; };
+		505FE16123809CBD009C0566 /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE16023809CBD009C0566 /* Income.swift */; };
+		505FE16323809CCD009C0566 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE16223809CCD009C0566 /* Transaction.swift */; };
+		505FE16523809D0B009C0566 /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE16423809D0B009C0566 /* Amount.swift */; };
+		505FE16723809D26009C0566 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE16623809D26009C0566 /* Currency.swift */; };
+		505FE1A12380B27C009C0566 /* Households.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1A02380B27C009C0566 /* Households.swift */; };
+		505FE1A32380B28E009C0566 /* HouseholdsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1A22380B28E009C0566 /* HouseholdsViewModel.swift */; };
+		505FE1A62380B2B5009C0566 /* HouseholdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1A52380B2B5009C0566 /* HouseholdsViewController.swift */; };
+		505FE1A82380B2D9009C0566 /* Households.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505FE1A72380B2D9009C0566 /* Households.storyboard */; };
+		505FE1AA2380B2E8009C0566 /* HouseholdsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1A92380B2E8009C0566 /* HouseholdsWireframe.swift */; };
+		505FE1AC2380B3A0009C0566 /* HouseholdsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1AB2380B3A0009C0566 /* HouseholdsService.swift */; };
+		505FE1AF2380B3CC009C0566 /* FirebaseFirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1AE2380B3CC009C0566 /* FirebaseFirestoreService.swift */; };
+		505FE1B22380B765009C0566 /* Firebase+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1B12380B765009C0566 /* Firebase+ReactiveSwift.swift */; };
+		505FE1B52381605A009C0566 /* HouseholdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1B32381605A009C0566 /* HouseholdTableViewCell.swift */; };
+		505FE1B62381605A009C0566 /* HouseholdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 505FE1B42381605A009C0566 /* HouseholdTableViewCell.xib */; };
+		505FE1B82381BC07009C0566 /* Current+User+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1B72381BC07009C0566 /* Current+User+Reactive.swift */; };
+		505FE1BA2381CDFB009C0566 /* HouseholdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1B92381CDFB009C0566 /* HouseholdViewController.swift */; };
+		505FE1BC2381CE26009C0566 /* HouseholdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1BB2381CE26009C0566 /* HouseholdViewModel.swift */; };
+		505FE1BF2381D055009C0566 /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1BE2381D055009C0566 /* Foundation+Extensions.swift */; };
+		505FE1C12381D156009C0566 /* MonthlyBundget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1C02381D156009C0566 /* MonthlyBundget.swift */; };
+		505FE1C32381D15F009C0566 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1C22381D15F009C0566 /* Budget.swift */; };
+		505FE1C62382B542009C0566 /* FirebaseFirestoreSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1C52382B542009C0566 /* FirebaseFirestoreSerialization.swift */; };
+		505FE1C82382BB6D009C0566 /* ReactiveSwift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1C72382BB6D009C0566 /* ReactiveSwift+Extensions.swift */; };
+		505FE1CA2382CFB4009C0566 /* MonthlyBudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1C92382CFB3009C0566 /* MonthlyBudgetTableViewCell.swift */; };
 		50CD2100237AF0ED0084DFDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD20FF237AF0ED0084DFDC /* AppDelegate.swift */; };
 		50CD2104237AF0ED0084DFDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD2103237AF0ED0084DFDC /* ViewController.swift */; };
 		50CD2107237AF0ED0084DFDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CD2105237AF0ED0084DFDC /* Main.storyboard */; };
@@ -48,6 +73,31 @@
 
 /* Begin PBXFileReference section */
 		23E6B115C075F8AECC37419A /* Pods_Financestruck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Financestruck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		505FE15C23809C8B009C0566 /* Household.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Household.swift; sourceTree = "<group>"; };
+		505FE15E23809CAA009C0566 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		505FE16023809CBD009C0566 /* Income.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
+		505FE16223809CCD009C0566 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		505FE16423809D0B009C0566 /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
+		505FE16623809D26009C0566 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		505FE1A02380B27C009C0566 /* Households.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Households.swift; sourceTree = "<group>"; };
+		505FE1A22380B28E009C0566 /* HouseholdsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseholdsViewModel.swift; sourceTree = "<group>"; };
+		505FE1A52380B2B5009C0566 /* HouseholdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseholdsViewController.swift; sourceTree = "<group>"; };
+		505FE1A72380B2D9009C0566 /* Households.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Households.storyboard; sourceTree = "<group>"; };
+		505FE1A92380B2E8009C0566 /* HouseholdsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseholdsWireframe.swift; sourceTree = "<group>"; };
+		505FE1AB2380B3A0009C0566 /* HouseholdsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseholdsService.swift; sourceTree = "<group>"; };
+		505FE1AE2380B3CC009C0566 /* FirebaseFirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreService.swift; sourceTree = "<group>"; };
+		505FE1B12380B765009C0566 /* Firebase+ReactiveSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+ReactiveSwift.swift"; sourceTree = "<group>"; };
+		505FE1B32381605A009C0566 /* HouseholdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseholdTableViewCell.swift; sourceTree = "<group>"; };
+		505FE1B42381605A009C0566 /* HouseholdTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseholdTableViewCell.xib; sourceTree = "<group>"; };
+		505FE1B72381BC07009C0566 /* Current+User+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Current+User+Reactive.swift"; sourceTree = "<group>"; };
+		505FE1B92381CDFB009C0566 /* HouseholdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseholdViewController.swift; sourceTree = "<group>"; };
+		505FE1BB2381CE26009C0566 /* HouseholdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseholdViewModel.swift; sourceTree = "<group>"; };
+		505FE1BE2381D055009C0566 /* Foundation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extensions.swift"; sourceTree = "<group>"; };
+		505FE1C02381D156009C0566 /* MonthlyBundget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBundget.swift; sourceTree = "<group>"; };
+		505FE1C22381D15F009C0566 /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		505FE1C52382B542009C0566 /* FirebaseFirestoreSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreSerialization.swift; sourceTree = "<group>"; };
+		505FE1C72382BB6D009C0566 /* ReactiveSwift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReactiveSwift+Extensions.swift"; sourceTree = "<group>"; };
+		505FE1C92382CFB3009C0566 /* MonthlyBudgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBudgetTableViewCell.swift; sourceTree = "<group>"; };
 		50CD20FC237AF0ED0084DFDC /* Financestruck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Financestruck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CD20FF237AF0ED0084DFDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50CD2103237AF0ED0084DFDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +136,7 @@
 		50CD2166237DEF960084DFDC /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		50CD2168237DEFA20084DFDC /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
 		50CD216A237DF0180084DFDC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		50CD216C237DF3A80084DFDC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		AFB12FDBA057FAFC6136841E /* Pods-Financestruck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Financestruck.release.xcconfig"; path = "Target Support Files/Pods-Financestruck/Pods-Financestruck.release.xcconfig"; sourceTree = "<group>"; };
 		DD7EC3476AF117E958E60202 /* Pods-Financestruck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Financestruck.debug.xcconfig"; path = "Target Support Files/Pods-Financestruck/Pods-Financestruck.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +160,96 @@
 				AFB12FDBA057FAFC6136841E /* Pods-Financestruck.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		505FE16823809DFA009C0566 /* Households */ = {
+			isa = PBXGroup;
+			children = (
+				505FE19F2380B26B009C0566 /* Service */,
+				505FE19E2380B264009C0566 /* Domain */,
+				505FE19D2380B25E009C0566 /* ViewModel */,
+				505FE19C2380B25A009C0566 /* View */,
+				505FE19B2380B253009C0566 /* Storyboard */,
+				505FE1A92380B2E8009C0566 /* HouseholdsWireframe.swift */,
+			);
+			path = Households;
+			sourceTree = "<group>";
+		};
+		505FE19B2380B253009C0566 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				505FE1A72380B2D9009C0566 /* Households.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		505FE19C2380B25A009C0566 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				505FE1A42380B2A1009C0566 /* Cell */,
+				505FE1A52380B2B5009C0566 /* HouseholdsViewController.swift */,
+				505FE1B92381CDFB009C0566 /* HouseholdViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		505FE19D2380B25E009C0566 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				505FE1A22380B28E009C0566 /* HouseholdsViewModel.swift */,
+				505FE1BB2381CE26009C0566 /* HouseholdViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		505FE19E2380B264009C0566 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				505FE1A02380B27C009C0566 /* Households.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		505FE19F2380B26B009C0566 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				505FE1AB2380B3A0009C0566 /* HouseholdsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		505FE1A42380B2A1009C0566 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				505FE1B32381605A009C0566 /* HouseholdTableViewCell.swift */,
+				505FE1B42381605A009C0566 /* HouseholdTableViewCell.xib */,
+				505FE1C92382CFB3009C0566 /* MonthlyBudgetTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		505FE1AD2380B3B9009C0566 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				505FE1AE2380B3CC009C0566 /* FirebaseFirestoreService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		505FE1B02380B74D009C0566 /* Reactive */ = {
+			isa = PBXGroup;
+			children = (
+				505FE1B12380B765009C0566 /* Firebase+ReactiveSwift.swift */,
+			);
+			path = Reactive;
+			sourceTree = "<group>";
+		};
+		505FE1C42382B52E009C0566 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				505FE1C52382B542009C0566 /* FirebaseFirestoreSerialization.swift */,
+			);
+			path = Serialization;
 			sourceTree = "<group>";
 		};
 		50CD20F3237AF0ED0084DFDC = {
@@ -140,6 +281,7 @@
 				50CD210A237AF0F10084DFDC /* LaunchScreen.storyboard */,
 				50CD2113237AF1560084DFDC /* GoogleService-Info.plist */,
 				50CD210D237AF0F10084DFDC /* Info.plist */,
+				50CD216C237DF3A80084DFDC /* README.md */,
 			);
 			path = Financestruck;
 			sourceTree = "<group>";
@@ -150,6 +292,7 @@
 				50CD2117237B09670084DFDC /* Main */,
 				50CD2118237B09840084DFDC /* Auth */,
 				50CD215C237DEF090084DFDC /* Home */,
+				505FE16823809DFA009C0566 /* Households */,
 			);
 			path = Story;
 			sourceTree = "<group>";
@@ -157,6 +300,7 @@
 		50CD2116237B08FD0084DFDC /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				505FE1B02380B74D009C0566 /* Reactive */,
 				50CD2159237DDA290084DFDC /* Third Party */,
 				50CD2154237D78A90084DFDC /* Extensions */,
 				50CD213A237B0D340084DFDC /* Dependency Injection */,
@@ -169,6 +313,7 @@
 		50CD2117237B09670084DFDC /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				505FE1AD2380B3B9009C0566 /* Service */,
 				50CD212E237B0C3B0084DFDC /* ViewModel */,
 				50CD212D237B0C300084DFDC /* View */,
 				50CD212C237B0C230084DFDC /* Storyboard */,
@@ -274,6 +419,7 @@
 			children = (
 				50CD2134237B0CE20084DFDC /* Current.swift */,
 				50CD2136237B0CF50084DFDC /* Current+User.swift */,
+				505FE1B72381BC07009C0566 /* Current+User+Reactive.swift */,
 			);
 			path = Current;
 			sourceTree = "<group>";
@@ -289,8 +435,17 @@
 		50CD214D237D76700084DFDC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				505FE1C42382B52E009C0566 /* Serialization */,
 				50CD214E237D767C0084DFDC /* SignInForm.swift */,
 				50CD214F237D767C0084DFDC /* SignUpForm.swift */,
+				505FE15C23809C8B009C0566 /* Household.swift */,
+				505FE15E23809CAA009C0566 /* Expense.swift */,
+				505FE16023809CBD009C0566 /* Income.swift */,
+				505FE16223809CCD009C0566 /* Transaction.swift */,
+				505FE16423809D0B009C0566 /* Amount.swift */,
+				505FE16623809D26009C0566 /* Currency.swift */,
+				505FE1C02381D156009C0566 /* MonthlyBundget.swift */,
+				505FE1C22381D15F009C0566 /* Budget.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,6 +456,8 @@
 				50CD2157237DCF9F0084DFDC /* UIKit+Extensions.swift */,
 				50CD2152237D78A60084DFDC /* NSError+Error.swift */,
 				50CD2153237D78A70084DFDC /* UIColor+Extensions.swift */,
+				505FE1BE2381D055009C0566 /* Foundation+Extensions.swift */,
+				505FE1C72382BB6D009C0566 /* ReactiveSwift+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -433,6 +590,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				505FE1A82380B2D9009C0566 /* Households.storyboard in Resources */,
+				505FE1B62381605A009C0566 /* HouseholdTableViewCell.xib in Resources */,
 				50CD210C237AF0F10084DFDC /* LaunchScreen.storyboard in Resources */,
 				50CD2114237AF1560084DFDC /* GoogleService-Info.plist in Resources */,
 				50CD2122237B0A3E0084DFDC /* Auth.storyboard in Resources */,
@@ -491,35 +650,58 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				505FE16723809D26009C0566 /* Currency.swift in Sources */,
+				505FE15F23809CAA009C0566 /* Expense.swift in Sources */,
 				50CD2120237B09EE0084DFDC /* AuthWireframe.swift in Sources */,
 				50CD2135237B0CE20084DFDC /* Current.swift in Sources */,
 				50CD2124237B0AAF0084DFDC /* SignInWithEmailViewController.swift in Sources */,
+				505FE16123809CBD009C0566 /* Income.swift in Sources */,
+				505FE1C12381D156009C0566 /* MonthlyBundget.swift in Sources */,
+				505FE1A32380B28E009C0566 /* HouseholdsViewModel.swift in Sources */,
+				505FE1AF2380B3CC009C0566 /* FirebaseFirestoreService.swift in Sources */,
+				505FE1BF2381D055009C0566 /* Foundation+Extensions.swift in Sources */,
 				50CD2151237D76830084DFDC /* SignUpForm.swift in Sources */,
+				505FE16323809CCD009C0566 /* Transaction.swift in Sources */,
+				505FE1C32381D15F009C0566 /* Budget.swift in Sources */,
 				50CD2158237DCF9F0084DFDC /* UIKit+Extensions.swift in Sources */,
 				50CD2167237DEF960084DFDC /* HomeCoordinator.swift in Sources */,
+				505FE1A12380B27C009C0566 /* Households.swift in Sources */,
+				505FE1AC2380B3A0009C0566 /* HouseholdsService.swift in Sources */,
 				50CD2140237B406A0084DFDC /* SignInWithEmailViewModel.swift in Sources */,
+				505FE16523809D0B009C0566 /* Amount.swift in Sources */,
 				50CD2144237D5BC40084DFDC /* AuthViewController.swift in Sources */,
 				50CD213C237B0D490084DFDC /* Context.swift in Sources */,
+				505FE1A62380B2B5009C0566 /* HouseholdsViewController.swift in Sources */,
 				50CD2155237D790B0084DFDC /* NSError+Error.swift in Sources */,
+				505FE15D23809C8B009C0566 /* Household.swift in Sources */,
+				505FE1C82382BB6D009C0566 /* ReactiveSwift+Extensions.swift in Sources */,
 				50CD213E237B3FFC0084DFDC /* AuthCoordinator.swift in Sources */,
 				50CD2139237B0D1B0084DFDC /* AuthService.swift in Sources */,
 				50CD2169237DEFA20084DFDC /* HomeWireframe.swift in Sources */,
 				50CD216B237DF0180084DFDC /* HomeViewModel.swift in Sources */,
+				505FE1B52381605A009C0566 /* HouseholdTableViewCell.swift in Sources */,
 				50CD2146237D5BC40084DFDC /* AuthSignUpViewController.swift in Sources */,
+				505FE1CA2382CFB4009C0566 /* MonthlyBudgetTableViewCell.swift in Sources */,
 				50CD212A237B0C1F0084DFDC /* Coordinator.swift in Sources */,
 				50CD215B237DDA5F0084DFDC /* KeyboardLayoutConstraint.swift in Sources */,
 				50CD2165237DEF790084DFDC /* HomeViewController.swift in Sources */,
+				505FE1BA2381CDFB009C0566 /* HouseholdViewController.swift in Sources */,
 				50CD214A237D5BE10084DFDC /* AuthSignUpViewModel.swift in Sources */,
 				50CD2150237D76830084DFDC /* SignInForm.swift in Sources */,
 				50CD212B237B0C1F0084DFDC /* Segues.swift in Sources */,
 				50CD214C237D5BE10084DFDC /* AuthSignInViewModel.swift in Sources */,
+				505FE1C62382B542009C0566 /* FirebaseFirestoreSerialization.swift in Sources */,
 				50CD2104237AF0ED0084DFDC /* ViewController.swift in Sources */,
 				50CD2129237B0BDA0084DFDC /* MainCoordinator.swift in Sources */,
 				50CD2130237B0C560084DFDC /* MainViewModel.swift in Sources */,
+				505FE1B82381BC07009C0566 /* Current+User+Reactive.swift in Sources */,
 				50CD2156237D790B0084DFDC /* UIColor+Extensions.swift in Sources */,
 				50CD2145237D5BC40084DFDC /* AuthSignInViewController.swift in Sources */,
+				505FE1AA2380B2E8009C0566 /* HouseholdsWireframe.swift in Sources */,
 				50CD2100237AF0ED0084DFDC /* AppDelegate.swift in Sources */,
 				50CD2137237B0CF50084DFDC /* Current+User.swift in Sources */,
+				505FE1BC2381CE26009C0566 /* HouseholdViewModel.swift in Sources */,
+				505FE1B22380B765009C0566 /* Firebase+ReactiveSwift.swift in Sources */,
 				50CD2132237B0C710084DFDC /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

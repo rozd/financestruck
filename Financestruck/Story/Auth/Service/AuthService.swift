@@ -14,6 +14,8 @@ protocol AuthService {
 
     var isAuthenticated: Bool { get }
 
+    var uid: String? { get }
+
     func signUp(with credentials: SignUpForm) -> SignalProducer<(), NSError>
 
     func signIn(with credentials: SignInForm) -> SignalProducer<(), NSError>
@@ -28,6 +30,10 @@ class FirebaseAuthService: AuthService {
 
     var isAuthenticated: Bool {
         return Auth.auth().currentUser != nil
+    }
+
+    var uid: String? {
+        return Auth.auth().currentUser?.uid
     }
 
     func signIn(withEmail email: String, callback: @escaping (Error?) -> ()) {
