@@ -33,6 +33,12 @@
 		505FE1C62382B542009C0566 /* FirebaseFirestoreSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1C52382B542009C0566 /* FirebaseFirestoreSerialization.swift */; };
 		505FE1C82382BB6D009C0566 /* ReactiveSwift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1C72382BB6D009C0566 /* ReactiveSwift+Extensions.swift */; };
 		505FE1CA2382CFB4009C0566 /* MonthlyBudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1C92382CFB3009C0566 /* MonthlyBudgetTableViewCell.swift */; };
+		505FE1D32384943D009C0566 /* Budgets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505FE1D22384943C009C0566 /* Budgets.storyboard */; };
+		505FE1D52384944A009C0566 /* BudgetsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1D42384944A009C0566 /* BudgetsWireframe.swift */; };
+		505FE1D7238494B0009C0566 /* BudgetsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1D6238494B0009C0566 /* BudgetsService.swift */; };
+		505FE1D9238496CD009C0566 /* Budgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1D8238496CC009C0566 /* Budgets.swift */; };
+		505FE1DB23849724009C0566 /* MonthlyBudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1DA23849724009C0566 /* MonthlyBudgetViewModel.swift */; };
+		505FE1DD238499D9009C0566 /* MonthlyBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1DC238499D9009C0566 /* MonthlyBudgetViewController.swift */; };
 		50CD2100237AF0ED0084DFDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD20FF237AF0ED0084DFDC /* AppDelegate.swift */; };
 		50CD2104237AF0ED0084DFDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD2103237AF0ED0084DFDC /* ViewController.swift */; };
 		50CD2107237AF0ED0084DFDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CD2105237AF0ED0084DFDC /* Main.storyboard */; };
@@ -98,6 +104,12 @@
 		505FE1C52382B542009C0566 /* FirebaseFirestoreSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreSerialization.swift; sourceTree = "<group>"; };
 		505FE1C72382BB6D009C0566 /* ReactiveSwift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReactiveSwift+Extensions.swift"; sourceTree = "<group>"; };
 		505FE1C92382CFB3009C0566 /* MonthlyBudgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBudgetTableViewCell.swift; sourceTree = "<group>"; };
+		505FE1D22384943C009C0566 /* Budgets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Budgets.storyboard; sourceTree = "<group>"; };
+		505FE1D42384944A009C0566 /* BudgetsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsWireframe.swift; sourceTree = "<group>"; };
+		505FE1D6238494B0009C0566 /* BudgetsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsService.swift; sourceTree = "<group>"; };
+		505FE1D8238496CC009C0566 /* Budgets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budgets.swift; sourceTree = "<group>"; };
+		505FE1DA23849724009C0566 /* MonthlyBudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBudgetViewModel.swift; sourceTree = "<group>"; };
+		505FE1DC238499D9009C0566 /* MonthlyBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBudgetViewController.swift; sourceTree = "<group>"; };
 		50CD20FC237AF0ED0084DFDC /* Financestruck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Financestruck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CD20FF237AF0ED0084DFDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50CD2103237AF0ED0084DFDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +264,59 @@
 			path = Serialization;
 			sourceTree = "<group>";
 		};
+		505FE1CB23849403009C0566 /* Budgets */ = {
+			isa = PBXGroup;
+			children = (
+				505FE1D023849428009C0566 /* Service */,
+				505FE1CF23849423009C0566 /* Domain */,
+				505FE1CE2384941D009C0566 /* ViewModel */,
+				505FE1CD23849418009C0566 /* View */,
+				505FE1CC23849412009C0566 /* Storyboard */,
+				505FE1D42384944A009C0566 /* BudgetsWireframe.swift */,
+			);
+			path = Budgets;
+			sourceTree = "<group>";
+		};
+		505FE1CC23849412009C0566 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				505FE1D22384943C009C0566 /* Budgets.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		505FE1CD23849418009C0566 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				505FE1DC238499D9009C0566 /* MonthlyBudgetViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		505FE1CE2384941D009C0566 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				505FE1DA23849724009C0566 /* MonthlyBudgetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		505FE1CF23849423009C0566 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				505FE1D8238496CC009C0566 /* Budgets.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		505FE1D023849428009C0566 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				505FE1D6238494B0009C0566 /* BudgetsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		50CD20F3237AF0ED0084DFDC = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +358,7 @@
 				50CD2118237B09840084DFDC /* Auth */,
 				50CD215C237DEF090084DFDC /* Home */,
 				505FE16823809DFA009C0566 /* Households */,
+				505FE1CB23849403009C0566 /* Budgets */,
 			);
 			path = Story;
 			sourceTree = "<group>";
@@ -590,6 +656,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				505FE1D32384943D009C0566 /* Budgets.storyboard in Resources */,
 				505FE1A82380B2D9009C0566 /* Households.storyboard in Resources */,
 				505FE1B62381605A009C0566 /* HouseholdTableViewCell.xib in Resources */,
 				50CD210C237AF0F10084DFDC /* LaunchScreen.storyboard in Resources */,
@@ -656,6 +723,7 @@
 				50CD2135237B0CE20084DFDC /* Current.swift in Sources */,
 				50CD2124237B0AAF0084DFDC /* SignInWithEmailViewController.swift in Sources */,
 				505FE16123809CBD009C0566 /* Income.swift in Sources */,
+				505FE1D9238496CD009C0566 /* Budgets.swift in Sources */,
 				505FE1C12381D156009C0566 /* MonthlyBundget.swift in Sources */,
 				505FE1A32380B28E009C0566 /* HouseholdsViewModel.swift in Sources */,
 				505FE1AF2380B3CC009C0566 /* FirebaseFirestoreService.swift in Sources */,
@@ -665,6 +733,7 @@
 				505FE1C32381D15F009C0566 /* Budget.swift in Sources */,
 				50CD2158237DCF9F0084DFDC /* UIKit+Extensions.swift in Sources */,
 				50CD2167237DEF960084DFDC /* HomeCoordinator.swift in Sources */,
+				505FE1D52384944A009C0566 /* BudgetsWireframe.swift in Sources */,
 				505FE1A12380B27C009C0566 /* Households.swift in Sources */,
 				505FE1AC2380B3A0009C0566 /* HouseholdsService.swift in Sources */,
 				50CD2140237B406A0084DFDC /* SignInWithEmailViewModel.swift in Sources */,
@@ -683,6 +752,7 @@
 				50CD2146237D5BC40084DFDC /* AuthSignUpViewController.swift in Sources */,
 				505FE1CA2382CFB4009C0566 /* MonthlyBudgetTableViewCell.swift in Sources */,
 				50CD212A237B0C1F0084DFDC /* Coordinator.swift in Sources */,
+				505FE1D7238494B0009C0566 /* BudgetsService.swift in Sources */,
 				50CD215B237DDA5F0084DFDC /* KeyboardLayoutConstraint.swift in Sources */,
 				50CD2165237DEF790084DFDC /* HomeViewController.swift in Sources */,
 				505FE1BA2381CDFB009C0566 /* HouseholdViewController.swift in Sources */,
@@ -700,7 +770,9 @@
 				505FE1AA2380B2E8009C0566 /* HouseholdsWireframe.swift in Sources */,
 				50CD2100237AF0ED0084DFDC /* AppDelegate.swift in Sources */,
 				50CD2137237B0CF50084DFDC /* Current+User.swift in Sources */,
+				505FE1DB23849724009C0566 /* MonthlyBudgetViewModel.swift in Sources */,
 				505FE1BC2381CE26009C0566 /* HouseholdViewModel.swift in Sources */,
+				505FE1DD238499D9009C0566 /* MonthlyBudgetViewController.swift in Sources */,
 				505FE1B22380B765009C0566 /* Firebase+ReactiveSwift.swift in Sources */,
 				50CD2132237B0C710084DFDC /* AuthViewModel.swift in Sources */,
 			);

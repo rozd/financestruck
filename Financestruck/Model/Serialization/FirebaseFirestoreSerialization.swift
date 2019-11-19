@@ -20,7 +20,7 @@ extension Household {
         self.init(from: snapshot)
     }
 
-    init?(from snapshot: DocumentSnapshot) {
+    init(from snapshot: DocumentSnapshot) {
         self.uid = snapshot.documentID
 
         let dict = snapshot.data()

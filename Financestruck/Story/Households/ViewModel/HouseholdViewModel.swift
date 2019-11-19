@@ -17,7 +17,7 @@ class HouseholdViewModel {
 
     // MARK: Outputs
 
-    let household: Property<Household?>
+    let household: Property<Household>
 
     let monthlyBudgets: Property<[MonthlyBudget]>
 
@@ -59,7 +59,9 @@ extension HouseholdViewModel {
 // MARK: Nested view models
 
 extension HouseholdViewModel {
-    func createBudgetViewModel(withBudgetAt indexPath: IndexPath) {
 
+    func createMonthlyBudgetViewModel(withBudgetAt indexPath: IndexPath) -> MonthlyBudgetViewModel {
+        return MonthlyBudgetViewModel(household: household.value, budget: monthlyBudgets.value[indexPath.row])
     }
+    
 }

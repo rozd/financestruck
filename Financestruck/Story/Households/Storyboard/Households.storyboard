@@ -84,11 +84,22 @@
                     <navigationItem key="navigationItem" id="Gcw-sd-VIg"/>
                     <connections>
                         <outlet property="tableView" destination="ad9-qe-hEg" id="ljh-Xb-bBy"/>
+                        <segue destination="u1j-9s-vvD" kind="show" identifier="showMonthlyBudget" id="5CC-TZ-jdG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTJ-Ol-uSU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="728.98550724637687" y="-185.49107142857142"/>
+        </scene>
+        <!--MonthlyBudget-->
+        <scene sceneID="QW5-NT-cbV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Budgets" referencedIdentifier="MonthlyBudget" id="u1j-9s-vvD" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BzG-hD-d5I"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPn-vU-CkS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1369" y="-185"/>
         </scene>
     </scenes>
 </document>

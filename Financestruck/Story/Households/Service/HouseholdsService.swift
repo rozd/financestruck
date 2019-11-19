@@ -13,7 +13,7 @@ import FirebaseFirestore
 protocol HouseholdsService {
     var my: Signal<[Household], NSError> { get }
 
-    func household(withId id: String) -> Signal<Household?, NSError>
+    func household(withId id: String) -> Signal<Household, NSError>
 
     func monthlyBudgets(for household: Household) -> Signal<[MonthlyBudget], NSError>
 }
@@ -28,7 +28,7 @@ class FirestoreHouseholdsService: FirebaseFirestoreService, HouseholdsService {
         return me.collection("households").reactive.snaps.map { $0.compactMap { Household(from: $0) } }
     }
 
-    func household(withId id: String) -> Signal<Household?, NSError> {
+    func household(withId id: String) -> Signal<Household, NSError> {
         return db.document("households/\(id)").reactive.snaps.map { Household(from: $0) }
     }
 

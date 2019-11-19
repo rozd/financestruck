@@ -11,7 +11,7 @@ import UIKit
 class HouseholdViewController: UIViewController, SegueHandler {
 
     enum SegueIdentifier: String {
-        case showBudget
+        case showMonthlyBudget
     }
 
     // MARK: Outlets
@@ -41,6 +41,14 @@ class HouseholdViewController: UIViewController, SegueHandler {
 
     // MARK: Navigation
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segueIdentifierForSegue(segue: segue) {
+        case .showMonthlyBudget:
+            if let vc = segue.destination as? MonthlyBudgetViewController, let indexPath = sender as? IndexPath {
+                vc.viewModel = viewModel.createMonthlyBudgetViewModel(withBudgetAt: indexPath)
+            }
+        }
+    }
 }
 
 // MARK: <UITableViewDataSource>
@@ -70,7 +78,7 @@ extension HouseholdViewController: UITableViewDataSource {
 extension HouseholdViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: .showBudget, sender: indexPath)
+        performSegue(withIdentifier: .showMonthlyBudget, sender: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

@@ -28,7 +28,7 @@ class Households {
         return service.my
     }
 
-    func household(withId id: String) -> Signal<Household?, NSError> {
+    func household(withId id: String) -> Signal<Household, NSError> {
         return service.household(withId: id)
     }
 
