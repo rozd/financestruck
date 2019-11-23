@@ -44,6 +44,11 @@ extension MonthlyBudgetViewModel {
     }
 }
 
+extension NewTransactionViewModel {
+    convenience init(household: Household, budget: MonthlyBudget) {
+        self.init(budgets: budgets, household: household, budget: budget)
+    }
+}
 
 // MARK: - Storyboard Integration
 

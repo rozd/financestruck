@@ -42,3 +42,13 @@ class MonthlyBudgetViewModel {
         self.errors = Signal.merge(errorsSignal)
     }
 }
+
+// MARK: Nested view models
+
+extension MonthlyBudgetViewModel {
+
+    func createNewTransactionViewModel(with category: CategoryKind) -> NewTransactionViewModel {
+        return NewTransactionViewModel(budgets: budgets, household: household, budget: budget.value)
+    }
+    
+}

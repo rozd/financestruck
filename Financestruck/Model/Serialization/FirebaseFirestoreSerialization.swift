@@ -54,3 +54,47 @@ extension MonthlyBudget {
         case name
     }
 }
+
+// MARK: - Category
+
+extension Expense {
+
+    init?(from snapshot: DocumentSnapshot?) {
+       guard let snapshot = snapshot else {
+           return nil
+       }
+       self.init(from: snapshot)
+    }
+
+    init(from snapshot: DocumentSnapshot) {
+       self.id = snapshot.documentID
+
+       let dict = snapshot.data()
+       self.name = dict?.string(for: Key.name.rawValue) ?? "Unknown"
+    }
+
+    fileprivate enum Key: String {
+       case name
+    }
+}
+
+extension Income {
+
+    init?(from snapshot: DocumentSnapshot?) {
+       guard let snapshot = snapshot else {
+           return nil
+       }
+       self.init(from: snapshot)
+    }
+
+    init(from snapshot: DocumentSnapshot) {
+       self.id = snapshot.documentID
+
+       let dict = snapshot.data()
+       self.name = dict?.string(for: Key.name.rawValue) ?? "Unknown"
+    }
+
+    fileprivate enum Key: String {
+       case name
+    }
+}

@@ -22,21 +22,68 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="A1Y-NZ-ydC">
+                                <rect key="frame" x="160.5" y="812" width="93" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzg-BN-do3">
+                                        <rect key="frame" x="0.0" y="0.0" width="93" height="30"/>
+                                        <state key="normal" title="New Expense"/>
+                                        <connections>
+                                            <action selector="handleAddExpenseButtonTap:" destination="L7s-zq-9Jv" eventType="touchUpInside" id="c7X-tq-Kth"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="23e-vV-qYD" firstAttribute="top" secondItem="VWO-0A-Ilv" secondAttribute="top" id="Axz-l4-Ecd"/>
+                            <constraint firstItem="A1Y-NZ-ydC" firstAttribute="centerX" secondItem="MBA-tu-UWP" secondAttribute="centerX" id="Jlg-Xu-NKe"/>
+                            <constraint firstItem="VWO-0A-Ilv" firstAttribute="bottom" secondItem="A1Y-NZ-ydC" secondAttribute="bottom" constant="20" id="SH6-t5-tfm"/>
                             <constraint firstItem="23e-vV-qYD" firstAttribute="centerX" secondItem="MBA-tu-UWP" secondAttribute="centerX" id="YFk-hG-6XI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VWO-0A-Ilv"/>
                     </view>
                     <connections>
+                        <outlet property="addExpenseButton" destination="kzg-BN-do3" id="rEf-95-Tsc"/>
                         <outlet property="titleLabel" destination="23e-vV-qYD" id="QTe-vO-bQw"/>
+                        <segue destination="oXb-eB-yOb" kind="show" identifier="showNewTransaction" id="DBu-Rg-nUv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9WS-6g-qxQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-138" y="171"/>
+        </scene>
+        <!--New Transaction View Controller-->
+        <scene sceneID="Rix-n3-xNU">
+            <objects>
+                <viewController id="oXb-eB-yOb" customClass="NewTransactionViewController" customModule="Financestruck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ldU-4Q-HFt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="2cc-yL-3cF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2cc-yL-3cF" firstAttribute="leading" secondItem="iFl-pa-trd" secondAttribute="leading" id="Ug1-DO-i0m"/>
+                            <constraint firstItem="iFl-pa-trd" firstAttribute="trailing" secondItem="2cc-yL-3cF" secondAttribute="trailing" id="gDv-vJ-pww"/>
+                            <constraint firstItem="iFl-pa-trd" firstAttribute="bottom" secondItem="2cc-yL-3cF" secondAttribute="bottom" id="hfw-Jk-X6b"/>
+                            <constraint firstItem="2cc-yL-3cF" firstAttribute="top" secondItem="iFl-pa-trd" secondAttribute="top" id="yes-QK-JQS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iFl-pa-trd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a5x-jW-RKh"/>
+                    <connections>
+                        <outlet property="tableView" destination="2cc-yL-3cF" id="hsm-Ct-g6h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNv-PW-UI8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="746" y="171"/>
         </scene>
     </scenes>
 </document>

@@ -90,12 +90,16 @@ extension UITableView {
         register(nib: nib, forCellWithType: type)
     }
 
+    func registerDefaultCell() {
+        register(UITableViewCell.self, forCellReuseIdentifier: "DefaultReusableCell")
+    }
+
     func dequeueReusableCell<T: UITableViewCell>(withType type: T.Type, for indexPath: IndexPath) -> T {
         return dequeueReusableCell(withIdentifier: type.reusableIdentifier, for: indexPath) as! T
     }
 
     func dequeueDefaultReusableCell() -> UITableViewCell {
-        return dequeueReusableCell(withIdentifier: "defaultReusableCell") ?? UITableViewCell(style: .default, reuseIdentifier: "defaultReusableCell")
+        return dequeueReusableCell(withIdentifier: "DefaultReusableCell") ?? UITableViewCell(style: .default, reuseIdentifier: "DefaultReusableCell")
     }
 
     func lastSectionIndex() -> Int {

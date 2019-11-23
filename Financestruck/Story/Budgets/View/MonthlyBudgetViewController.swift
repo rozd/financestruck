@@ -10,11 +10,16 @@ import UIKit
 import ReactiveSwift
 import ReactiveCocoa
 
-class MonthlyBudgetViewController: UIViewController {
+class MonthlyBudgetViewController: UIViewController, SegueHandler {
+
+    enum SegueIdentifier: String {
+        case showNewTransaction
+    }
 
     // MARK: Outlets
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var addExpenseButton: UIButton!
 
     // MARK: View model
 
@@ -43,4 +48,20 @@ class MonthlyBudgetViewController: UIViewController {
     }
     */
 
+    // MARK: Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segueIdentifierForSegue(segue: segue) {
+        case .showNewTransaction:
+            if let vc = segue.destination as? NewTransactionViewController, let kind = sender as? CategoryKind {
+                vc.viewModel = viewModel.createNewTransactionViewModel(with: kind)
+            }
+        }
+    }
+
+    // MARK: Actions
+
+    @IBAction func handleAddExpenseButtonTap(_ sender: Any) {
+        performSegue(withIdentifier: .showNewTransaction, sender: CategoryKind.expense)
+    }
 }

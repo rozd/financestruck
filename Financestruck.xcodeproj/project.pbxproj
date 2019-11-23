@@ -39,6 +39,15 @@
 		505FE1D9238496CD009C0566 /* Budgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1D8238496CC009C0566 /* Budgets.swift */; };
 		505FE1DB23849724009C0566 /* MonthlyBudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1DA23849724009C0566 /* MonthlyBudgetViewModel.swift */; };
 		505FE1DD238499D9009C0566 /* MonthlyBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1DC238499D9009C0566 /* MonthlyBudgetViewController.swift */; };
+		505FE1DF23855298009C0566 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1DE23855298009C0566 /* NewTransactionViewController.swift */; };
+		505FE1E1238552B0009C0566 /* NewTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1E0238552B0009C0566 /* NewTransactionViewModel.swift */; };
+		505FE1E323855D63009C0566 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1E223855D62009C0566 /* Category.swift */; };
+		505FE1E723859296009C0566 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE1E523859296009C0566 /* DatePickerTableViewCell.swift */; };
+		505FE1E823859296009C0566 /* DatePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 505FE1E623859296009C0566 /* DatePickerTableViewCell.xib */; };
+		50AC124423893A28008B69F7 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC124223893A28008B69F7 /* TextFieldTableViewCell.swift */; };
+		50AC124523893A28008B69F7 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50AC124323893A28008B69F7 /* TextFieldTableViewCell.xib */; };
+		50AC1248238946AA008B69F7 /* UIKit+TableStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC1247238946AA008B69F7 /* UIKit+TableStructure.swift */; };
+		50AC124B23894952008B69F7 /* TransactionTableStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC124A23894952008B69F7 /* TransactionTableStructure.swift */; };
 		50CD2100237AF0ED0084DFDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD20FF237AF0ED0084DFDC /* AppDelegate.swift */; };
 		50CD2104237AF0ED0084DFDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD2103237AF0ED0084DFDC /* ViewController.swift */; };
 		50CD2107237AF0ED0084DFDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CD2105237AF0ED0084DFDC /* Main.storyboard */; };
@@ -110,6 +119,15 @@
 		505FE1D8238496CC009C0566 /* Budgets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budgets.swift; sourceTree = "<group>"; };
 		505FE1DA23849724009C0566 /* MonthlyBudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBudgetViewModel.swift; sourceTree = "<group>"; };
 		505FE1DC238499D9009C0566 /* MonthlyBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBudgetViewController.swift; sourceTree = "<group>"; };
+		505FE1DE23855298009C0566 /* NewTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionViewController.swift; sourceTree = "<group>"; };
+		505FE1E0238552B0009C0566 /* NewTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionViewModel.swift; sourceTree = "<group>"; };
+		505FE1E223855D62009C0566 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		505FE1E523859296009C0566 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		505FE1E623859296009C0566 /* DatePickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerTableViewCell.xib; sourceTree = "<group>"; };
+		50AC124223893A28008B69F7 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		50AC124323893A28008B69F7 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		50AC1247238946AA008B69F7 /* UIKit+TableStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+TableStructure.swift"; sourceTree = "<group>"; };
+		50AC124A23894952008B69F7 /* TransactionTableStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableStructure.swift; sourceTree = "<group>"; };
 		50CD20FC237AF0ED0084DFDC /* Financestruck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Financestruck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CD20FF237AF0ED0084DFDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50CD2103237AF0ED0084DFDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -288,7 +306,10 @@
 		505FE1CD23849418009C0566 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				50AC12492389492D008B69F7 /* DisplayData */,
+				505FE1E4238580E8009C0566 /* Cell */,
 				505FE1DC238499D9009C0566 /* MonthlyBudgetViewController.swift */,
+				505FE1DE23855298009C0566 /* NewTransactionViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				505FE1DA23849724009C0566 /* MonthlyBudgetViewModel.swift */,
+				505FE1E0238552B0009C0566 /* NewTransactionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -315,6 +337,33 @@
 				505FE1D6238494B0009C0566 /* BudgetsService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		505FE1E4238580E8009C0566 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				505FE1E523859296009C0566 /* DatePickerTableViewCell.swift */,
+				505FE1E623859296009C0566 /* DatePickerTableViewCell.xib */,
+				50AC124223893A28008B69F7 /* TextFieldTableViewCell.swift */,
+				50AC124323893A28008B69F7 /* TextFieldTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		50AC1246238945DE008B69F7 /* Table Structure */ = {
+			isa = PBXGroup;
+			children = (
+				50AC1247238946AA008B69F7 /* UIKit+TableStructure.swift */,
+			);
+			path = "Table Structure";
+			sourceTree = "<group>";
+		};
+		50AC12492389492D008B69F7 /* DisplayData */ = {
+			isa = PBXGroup;
+			children = (
+				50AC124A23894952008B69F7 /* TransactionTableStructure.swift */,
+			);
+			path = DisplayData;
 			sourceTree = "<group>";
 		};
 		50CD20F3237AF0ED0084DFDC = {
@@ -366,6 +415,7 @@
 		50CD2116237B08FD0084DFDC /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				50AC1246238945DE008B69F7 /* Table Structure */,
 				505FE1B02380B74D009C0566 /* Reactive */,
 				50CD2159237DDA290084DFDC /* Third Party */,
 				50CD2154237D78A90084DFDC /* Extensions */,
@@ -512,6 +562,7 @@
 				505FE16623809D26009C0566 /* Currency.swift */,
 				505FE1C02381D156009C0566 /* MonthlyBundget.swift */,
 				505FE1C22381D15F009C0566 /* Budget.swift */,
+				505FE1E223855D62009C0566 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -659,12 +710,14 @@
 				505FE1D32384943D009C0566 /* Budgets.storyboard in Resources */,
 				505FE1A82380B2D9009C0566 /* Households.storyboard in Resources */,
 				505FE1B62381605A009C0566 /* HouseholdTableViewCell.xib in Resources */,
+				50AC124523893A28008B69F7 /* TextFieldTableViewCell.xib in Resources */,
 				50CD210C237AF0F10084DFDC /* LaunchScreen.storyboard in Resources */,
 				50CD2114237AF1560084DFDC /* GoogleService-Info.plist in Resources */,
 				50CD2122237B0A3E0084DFDC /* Auth.storyboard in Resources */,
 				50CD2163237DEF600084DFDC /* Home.storyboard in Resources */,
 				50CD2109237AF0F10084DFDC /* Assets.xcassets in Resources */,
 				50CD2107237AF0ED0084DFDC /* Main.storyboard in Resources */,
+				505FE1E823859296009C0566 /* DatePickerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,9 +801,11 @@
 				50CD2139237B0D1B0084DFDC /* AuthService.swift in Sources */,
 				50CD2169237DEFA20084DFDC /* HomeWireframe.swift in Sources */,
 				50CD216B237DF0180084DFDC /* HomeViewModel.swift in Sources */,
+				50AC1248238946AA008B69F7 /* UIKit+TableStructure.swift in Sources */,
 				505FE1B52381605A009C0566 /* HouseholdTableViewCell.swift in Sources */,
 				50CD2146237D5BC40084DFDC /* AuthSignUpViewController.swift in Sources */,
 				505FE1CA2382CFB4009C0566 /* MonthlyBudgetTableViewCell.swift in Sources */,
+				505FE1DF23855298009C0566 /* NewTransactionViewController.swift in Sources */,
 				50CD212A237B0C1F0084DFDC /* Coordinator.swift in Sources */,
 				505FE1D7238494B0009C0566 /* BudgetsService.swift in Sources */,
 				50CD215B237DDA5F0084DFDC /* KeyboardLayoutConstraint.swift in Sources */,
@@ -759,13 +814,18 @@
 				50CD214A237D5BE10084DFDC /* AuthSignUpViewModel.swift in Sources */,
 				50CD2150237D76830084DFDC /* SignInForm.swift in Sources */,
 				50CD212B237B0C1F0084DFDC /* Segues.swift in Sources */,
+				505FE1E723859296009C0566 /* DatePickerTableViewCell.swift in Sources */,
 				50CD214C237D5BE10084DFDC /* AuthSignInViewModel.swift in Sources */,
+				505FE1E1238552B0009C0566 /* NewTransactionViewModel.swift in Sources */,
 				505FE1C62382B542009C0566 /* FirebaseFirestoreSerialization.swift in Sources */,
 				50CD2104237AF0ED0084DFDC /* ViewController.swift in Sources */,
+				505FE1E323855D63009C0566 /* Category.swift in Sources */,
 				50CD2129237B0BDA0084DFDC /* MainCoordinator.swift in Sources */,
 				50CD2130237B0C560084DFDC /* MainViewModel.swift in Sources */,
+				50AC124423893A28008B69F7 /* TextFieldTableViewCell.swift in Sources */,
 				505FE1B82381BC07009C0566 /* Current+User+Reactive.swift in Sources */,
 				50CD2156237D790B0084DFDC /* UIColor+Extensions.swift in Sources */,
+				50AC124B23894952008B69F7 /* TransactionTableStructure.swift in Sources */,
 				50CD2145237D5BC40084DFDC /* AuthSignInViewController.swift in Sources */,
 				505FE1AA2380B2E8009C0566 /* HouseholdsWireframe.swift in Sources */,
 				50CD2100237AF0ED0084DFDC /* AppDelegate.swift in Sources */,

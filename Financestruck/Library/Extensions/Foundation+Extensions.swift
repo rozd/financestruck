@@ -65,7 +65,7 @@ extension Array where Iterator.Element: Equatable {
 
     @discardableResult
     mutating func remove(element: Iterator.Element) -> Iterator.Element? {
-        guard let index = self.index(of: element) else {
+        guard let index = self.firstIndex(of: element) else {
             return nil
         }
         return remove(at: index)
