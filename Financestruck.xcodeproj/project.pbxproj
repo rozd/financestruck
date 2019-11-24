@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -48,6 +48,7 @@
 		50AC124523893A28008B69F7 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50AC124323893A28008B69F7 /* TextFieldTableViewCell.xib */; };
 		50AC1248238946AA008B69F7 /* UIKit+TableStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC1247238946AA008B69F7 /* UIKit+TableStructure.swift */; };
 		50AC124B23894952008B69F7 /* TransactionTableStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC124A23894952008B69F7 /* TransactionTableStructure.swift */; };
+		50AC1258238A8C74008B69F7 /* Changeset in Frameworks */ = {isa = PBXBuildFile; productRef = 50AC1257238A8C74008B69F7 /* Changeset */; };
 		50CD2100237AF0ED0084DFDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD20FF237AF0ED0084DFDC /* AppDelegate.swift */; };
 		50CD2104237AF0ED0084DFDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD2103237AF0ED0084DFDC /* ViewController.swift */; };
 		50CD2107237AF0ED0084DFDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CD2105237AF0ED0084DFDC /* Main.storyboard */; };
@@ -177,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				302CC8BDF2F6C1E9055C8749 /* Pods_Financestruck.framework in Frameworks */,
+				50AC1258238A8C74008B69F7 /* Changeset in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +667,9 @@
 			dependencies = (
 			);
 			name = Financestruck;
+			packageProductDependencies = (
+				50AC1257238A8C74008B69F7 /* Changeset */,
+			);
 			productName = Financestruck;
 			productReference = 50CD20FC237AF0ED0084DFDC /* Financestruck.app */;
 			productType = "com.apple.product-type.application";
@@ -693,6 +698,9 @@
 				Base,
 			);
 			mainGroup = 50CD20F3237AF0ED0084DFDC;
+			packageReferences = (
+				50AC1256238A8C74008B69F7 /* XCRemoteSwiftPackageReference "Changeset" */,
+			);
 			productRefGroup = 50CD20FD237AF0ED0084DFDC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1034,6 +1042,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		50AC1256238A8C74008B69F7 /* XCRemoteSwiftPackageReference "Changeset" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rozd/Changeset.git";
+			requirement = {
+				branch = "swift-5";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		50AC1257238A8C74008B69F7 /* Changeset */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50AC1256238A8C74008B69F7 /* XCRemoteSwiftPackageReference "Changeset" */;
+			productName = Changeset;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 50CD20F4237AF0ED0084DFDC /* Project object */;
 }
