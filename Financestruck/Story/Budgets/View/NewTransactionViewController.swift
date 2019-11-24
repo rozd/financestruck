@@ -42,6 +42,9 @@ class NewTransactionViewController: UIViewController {
 
         sections = [
             TransactionSection(rows: [
+                TransactionCategoryTableRow(displayData: .expense)
+            ]),
+            TransactionSection(rows: [
                 TransactionDateTableRow(displayData: Date())
             ])
         ]
@@ -120,13 +123,16 @@ extension NewTransactionViewController: UITableViewDataSource {
             let cell = tableView.dequeueDefaultReusableCell()
             cell.textLabel?.text = "\(row.displayData)"
             return cell
-        default:
-            guard let indexPath = datePickerIndexPath else {
-                return tableView.dequeueDefaultReusableCell()
-            }
+        case _ as TransactionDatePickerTableRow:
             let cell = tableView.dequeueReusableCell(withType: DatePickerTableViewCell.self, for: indexPath)
             cell.delegate = self
             return cell
+        case let row as TransactionCategoryTableRow:
+            let cell = tableView.dequeueDefaultReusableCell()
+            cell.textLabel?.text = "\(row.displayData)"
+            return cell
+        default:
+            return tableView.dequeueDefaultReusableCell()
         }
     }
 
@@ -144,27 +150,25 @@ extension NewTransactionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        guard shouldDatePickerAppearForRow(at: indexPath) else {
-            dismissDatePickerIfPresented()
-            return
-        }
-
-        tableView.endEditing(true)
-
-        tableView.beginUpdates()
-        if let datePickerIndexPath = datePickerIndexPath {
-            sections.delete(from: tableView, rowAt: datePickerIndexPath, with: .fade)
-            if datePickerIsRightBelowMe(indexPath: indexPath) {
-                self.datePickerIndexPath = nil
+        if shouldDatePickerAppearForRow(at: indexPath) {
+            tableView.endEditing(true)
+            tableView.beginUpdates()
+            if let datePickerIndexPath = datePickerIndexPath {
+                sections.delete(from: tableView, rowAt: datePickerIndexPath, with: .fade)
+                if datePickerIsRightBelowMe(indexPath: indexPath) {
+                    self.datePickerIndexPath = nil
+                } else {
+                    self.datePickerIndexPath = IndexPath(row: indexPath.row + 1, section: indexPath.section)
+                    sections.insert(into: tableView, row: TransactionDatePickerTableRow(), at: self.datePickerIndexPath!, with: .left)
+                }
             } else {
                 self.datePickerIndexPath = IndexPath(row: indexPath.row + 1, section: indexPath.section)
-                sections.insert(into: tableView, row: TransactionDatePickerTableRow(), at: self.datePickerIndexPath!, with: .left)
+                sections.insert(into: tableView, row: TransactionDatePickerTableRow(), at: self.datePickerIndexPath!, with: .fade)
             }
+            tableView.endUpdates()
         } else {
-            self.datePickerIndexPath = IndexPath(row: indexPath.row + 1, section: indexPath.section)
-            sections.insert(into: tableView, row: TransactionDatePickerTableRow(), at: self.datePickerIndexPath!, with: .fade)
+            dismissDatePickerIfPresented()
         }
-        tableView.endUpdates()
     }
 
 }
@@ -174,7 +178,7 @@ extension NewTransactionViewController: UITableViewDelegate {
 extension NewTransactionViewController: DatePickerTableViewCellDelegate {
 
     func datePickerCell(_ cell: DatePickerTableViewCell, didChangeDate date: Date) {
-        
+
     }
 
 }

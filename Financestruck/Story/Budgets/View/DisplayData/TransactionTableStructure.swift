@@ -16,9 +16,10 @@ struct TransactionSection: TableSection {
 
 struct TransactionDateTableRow: TableRowWithDisplayData {
     var displayData: Date
-    var height: CGFloat? {
-        return 44.0
-    }
+}
+
+struct TransactionCategoryTableRow: TableRowWithDisplayData {
+    var displayData: CategoryKind
 }
 
 struct TransactionDatePickerTableRow: TableRowWithSpecificCell {
@@ -41,6 +42,9 @@ extension Collection where Iterator.Element == TableSection, Index == Int {
 
     static func sections(for transaction: ExpenseTransaction) -> [TableSection] {
         return [
+            TransactionSection(rows: [
+                TransactionCategoryTableRow(displayData: transaction.category.kind)
+            ]),
             TransactionSection(rows: [
                 TransactionDateTableRow(displayData: Date())
             ])
