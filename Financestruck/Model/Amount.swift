@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Amount {
+struct Amount : Equatable {
     let value: Float
     let currency: Currency
 }

@@ -8,8 +8,11 @@
 
 import Foundation
 import ReactiveSwift
+import Changeset
 
 class NewTransactionViewModel {
+
+    typealias TableChangeset = Changeset<[TableSection]>
 
     // MARK: Model
 
@@ -26,12 +29,18 @@ class NewTransactionViewModel {
     let amountValue: MutableProperty<Float?>
     let amountCurrency: MutableProperty<Currency?>
 
+    let date: MutableProperty<Date>
+
     // MARK: Output
 
     let availableCategories: Property<[CategoryKind]>
     let availableCurrencies: Property<[Currency]>
 
     let categories: Signal<[Category], NSError>
+
+    let sections: Property<[TableSection]>
+
+    let sectionsChangeset: Signal<[TableChangeset.Edit], Never>
 
     // MARK: Lifecycle
 
@@ -45,6 +54,7 @@ class NewTransactionViewModel {
         amountValue = MutableProperty(nil)
         amountCurrency = MutableProperty(nil)
 
+        date = MutableProperty(Date())
 
         availableCategories = Property(value: [.expense, .income])
         availableCurrencies = Property(value: [.usd, .uah])
@@ -56,6 +66,36 @@ class NewTransactionViewModel {
             }
         }
 
+        sections = Property(initial: [], then: Property.combineLatest(kind, date).map { kind, date in
+            return [
+                [
+                    .wrap(TransactionCategoryTableRow(displayData: kind)),
+                ],
+                [
+                    .wrap(TransactionDateTableRow(displayData: date)),
+                ]
+            ]
+        })
+
+        sectionsChangeset = sections.signal.combinePrevious([]).map { (oldItems, newItems) in TableChangeset.edits(from: oldItems, to: newItems) }
+    }
+
+}
+
+// MARK: Table Support
+
+extension NewTransactionViewModel {
+
+    func numberOfSections() -> Int {
+        return sections.value.count
+    }
+
+    func numberOfRows(in section: Int) -> Int {
+        return sections.value[section].count
+    }
+
+    func row(at indexPath: IndexPath) -> TableRow {
+        return sections.value[indexPath.section][indexPath.row].row
     }
 
 }

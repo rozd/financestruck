@@ -49,6 +49,7 @@
 		50AC1248238946AA008B69F7 /* UIKit+TableStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC1247238946AA008B69F7 /* UIKit+TableStructure.swift */; };
 		50AC124B23894952008B69F7 /* TransactionTableStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC124A23894952008B69F7 /* TransactionTableStructure.swift */; };
 		50AC1258238A8C74008B69F7 /* Changeset in Frameworks */ = {isa = PBXBuildFile; productRef = 50AC1257238A8C74008B69F7 /* Changeset */; };
+		50AC125A238A9A79008B69F7 /* Changeset+UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC1259238A9A79008B69F7 /* Changeset+UIKit+Extension.swift */; };
 		50CD2100237AF0ED0084DFDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD20FF237AF0ED0084DFDC /* AppDelegate.swift */; };
 		50CD2104237AF0ED0084DFDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD2103237AF0ED0084DFDC /* ViewController.swift */; };
 		50CD2107237AF0ED0084DFDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CD2105237AF0ED0084DFDC /* Main.storyboard */; };
@@ -129,6 +130,7 @@
 		50AC124323893A28008B69F7 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		50AC1247238946AA008B69F7 /* UIKit+TableStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+TableStructure.swift"; sourceTree = "<group>"; };
 		50AC124A23894952008B69F7 /* TransactionTableStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableStructure.swift; sourceTree = "<group>"; };
+		50AC1259238A9A79008B69F7 /* Changeset+UIKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Changeset+UIKit+Extension.swift"; sourceTree = "<group>"; };
 		50CD20FC237AF0ED0084DFDC /* Financestruck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Financestruck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CD20FF237AF0ED0084DFDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50CD2103237AF0ED0084DFDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -577,6 +579,7 @@
 				50CD2153237D78A70084DFDC /* UIColor+Extensions.swift */,
 				505FE1BE2381D055009C0566 /* Foundation+Extensions.swift */,
 				505FE1C72382BB6D009C0566 /* ReactiveSwift+Extensions.swift */,
+				50AC1259238A9A79008B69F7 /* Changeset+UIKit+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -789,6 +792,7 @@
 				505FE1A32380B28E009C0566 /* HouseholdsViewModel.swift in Sources */,
 				505FE1AF2380B3CC009C0566 /* FirebaseFirestoreService.swift in Sources */,
 				505FE1BF2381D055009C0566 /* Foundation+Extensions.swift in Sources */,
+				50AC125A238A9A79008B69F7 /* Changeset+UIKit+Extension.swift in Sources */,
 				50CD2151237D76830084DFDC /* SignUpForm.swift in Sources */,
 				505FE16323809CCD009C0566 /* Transaction.swift in Sources */,
 				505FE1C32381D15F009C0566 /* Budget.swift in Sources */,
@@ -1048,7 +1052,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rozd/Changeset.git";
 			requirement = {
-				branch = "swift-5";
+				branch = master;
 				kind = branch;
 			};
 		};

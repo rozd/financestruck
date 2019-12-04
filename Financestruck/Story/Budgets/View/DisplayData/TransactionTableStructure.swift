@@ -10,45 +10,62 @@ import UIKit
 
 // MARK: Element Descriptions
 
-struct TransactionSection: TableSection {
-    var rows: [TableRow]
-}
+struct TransactionDateTableRow : TableRowWithDisplayData {
 
-struct TransactionDateTableRow: TableRowWithDisplayData {
     var displayData: Date
+
+    func equals(to row: TableRow) -> Bool {
+        guard let row = row as? TransactionDateTableRow else {
+            return false
+        }
+        return row.displayData == self.displayData
+    }
+
 }
 
-struct TransactionCategoryTableRow: TableRowWithDisplayData {
+struct TransactionCategoryTableRow : TableRowWithDisplayData {
     var displayData: CategoryKind
+
+    func equals(to row: TableRow) -> Bool {
+        guard let row = row as? TransactionCategoryTableRow else {
+            return false
+        }
+        return row.displayData == self.displayData
+    }
+
 }
 
-struct TransactionDatePickerTableRow: TableRowWithSpecificCell {
+struct TransactionDatePickerTableRow : TableRowWithSpecificCell, TableRowWithDisplayData {
     typealias Cell = DatePickerTableViewCell
+
+    var displayData: Date
+
     var height: CGFloat? {
         return 132.0
     }
+
+    func equals(to row: TableRow) -> Bool {
+        guard let row = row as? TransactionDatePickerTableRow else {
+            return false
+        }
+        return row.displayData == self.displayData
+    }
+
 }
 
-struct TransactionAmountTableRow: TableRowWithDisplayData {
+struct TransactionAmountTableRow : TableRowWithDisplayData {
+
     var displayData: Amount
+
     var height: CGFloat? {
         return 64.0
     }
-}
 
-// MARK: Structure
-
-extension Collection where Iterator.Element == TableSection, Index == Int {
-
-    static func sections(for transaction: ExpenseTransaction) -> [TableSection] {
-        return [
-            TransactionSection(rows: [
-                TransactionCategoryTableRow(displayData: transaction.category.kind)
-            ]),
-            TransactionSection(rows: [
-                TransactionDateTableRow(displayData: Date())
-            ])
-        ]
+    func equals(to row: TableRow) -> Bool {
+        guard let row = row as? TransactionAmountTableRow else {
+            return false
+        }
+        return row.displayData == self.displayData
     }
 
 }

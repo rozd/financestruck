@@ -5,8 +5,8 @@
         "package": "Changeset",
         "repositoryURL": "https://github.com/rozd/Changeset.git",
         "state": {
-          "branch": "swift-5",
-          "revision": "de5819c099da4644ee7b68e36931ddb49a21be5c",
+          "branch": "master",
+          "revision": "9cf552eba8e077fb4b488c540bfcb0f997db048b",
           "version": null
         }
       }

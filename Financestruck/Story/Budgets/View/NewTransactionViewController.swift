@@ -18,8 +18,6 @@ class NewTransactionViewController: UIViewController {
 
     // MARK: Properties
 
-    var sections: [TableSection] = []
-
     var datePickerIndexPath: IndexPath?
 
     // MARK: View model
@@ -40,16 +38,9 @@ class NewTransactionViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
 
-        sections = [
-            TransactionSection(rows: [
-                TransactionCategoryTableRow(displayData: .expense)
-            ]),
-            TransactionSection(rows: [
-                TransactionDateTableRow(displayData: Date())
-            ])
-        ]
-
         // reactive
+
+        tableView.reactive.edits(animation: .fade) <~ viewModel.sectionsChangeset
     }
     
 
@@ -100,7 +91,7 @@ extension NewTransactionViewController {
     }
 
     func shouldDatePickerAppearForRow(at indexPath: IndexPath) -> Bool {
-        return sections.row(at: indexPath) is TransactionDateTableRow
+        return viewModel.row(at: indexPath) is TransactionDateTableRow
     }
 
 }
@@ -110,15 +101,15 @@ extension NewTransactionViewController {
 extension NewTransactionViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+        return viewModel.numberOfSections()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].rows.count
+        return viewModel.numberOfRows(in: section)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch sections.row(at: indexPath) {
+        switch viewModel.row(at: indexPath) {
         case let row as TransactionDateTableRow:
             let cell = tableView.dequeueDefaultReusableCell()
             cell.textLabel?.text = "\(row.displayData)"
@@ -136,7 +127,6 @@ extension NewTransactionViewController: UITableViewDataSource {
         }
     }
 
-
 }
 
 // MARK: - UITableViewDelegate
@@ -144,7 +134,7 @@ extension NewTransactionViewController: UITableViewDataSource {
 extension NewTransactionViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return sections.row(at: indexPath).height ?? tableView.rowHeight
+        return viewModel.row(at: indexPath).height ?? tableView.rowHeight
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -154,16 +144,16 @@ extension NewTransactionViewController: UITableViewDelegate {
             tableView.endEditing(true)
             tableView.beginUpdates()
             if let datePickerIndexPath = datePickerIndexPath {
-                sections.delete(from: tableView, rowAt: datePickerIndexPath, with: .fade)
+//                sections.delete(from: tableView, rowAt: datePickerIndexPath, with: .fade)
                 if datePickerIsRightBelowMe(indexPath: indexPath) {
                     self.datePickerIndexPath = nil
                 } else {
                     self.datePickerIndexPath = IndexPath(row: indexPath.row + 1, section: indexPath.section)
-                    sections.insert(into: tableView, row: TransactionDatePickerTableRow(), at: self.datePickerIndexPath!, with: .left)
+//                    sections.insert(into: tableView, row: TransactionDatePickerTableRow(), at: self.datePickerIndexPath!, with: .left)
                 }
             } else {
                 self.datePickerIndexPath = IndexPath(row: indexPath.row + 1, section: indexPath.section)
-                sections.insert(into: tableView, row: TransactionDatePickerTableRow(), at: self.datePickerIndexPath!, with: .fade)
+//                sections.insert(into: tableView, row: TransactionDatePickerTableRow(), at: self.datePickerIndexPath!, with: .fade)
             }
             tableView.endUpdates()
         } else {
